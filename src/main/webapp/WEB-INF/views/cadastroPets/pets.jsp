@@ -28,14 +28,14 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif}
 	  <!-- Navbar (sit on top) -->
 <div class="w3-top w3-hide-small">
   <div class="w3-bar w3-xlarge w3-black w3-opacity w3-hover-opacity-off" id="myNavbar">
-     <a href="../Index.html" class="w3-bar-item w3-button">Cadastro </a>
-	<a href="Cadastro Cliente.html" class="w3-bar-item w3-button">Cliente</a>
-    <a href="Cadastro Funcionario.html" class="w3-bar-item w3-button">Funcionario</a>
-    <a href="Cadastro Exames.html" class="w3-bar-item w3-button">Exames</a>
-	<a href="Cadastro Tratamento.html" class="w3-bar-item w3-button">Tratamento</a>
-	<a href="Cadastro Especialidade.html" class="w3-bar-item w3-button">Especialidade</a>
-	<a href="Cadastro Animal.html" class="w3-bar-item w3-button">Animal</a>
-	<a href="Contato.html" class="w3-bar-item w3-button">Contato</a>
+     <a href="/" class="w3-bar-item w3-button">Home </a>
+	<a href="/cadastrarCliente" class="w3-bar-item w3-button">Cliente</a>
+    <a href="/cadastrarFuncionario" class="w3-bar-item w3-button">Funcionario</a>
+    <a href="/cadastrarExame" class="w3-bar-item w3-button">Exames</a>
+	<a href="/cadastrarTratamento" class="w3-bar-item w3-button">Tratamento</a>
+	<a href="/cadastrarEspecialidades" class="w3-bar-item w3-button">Especialidade</a>
+	<a href="/cadastrarAnimal" class="w3-bar-item w3-button">Animal</a>
+	<a href="/contato" class="w3-bar-item w3-button">Contato</a>
 	
   </div>
 </div> 

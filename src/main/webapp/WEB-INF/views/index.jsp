@@ -1,63 +1,44 @@
+
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
-
 <!DOCTYPE html>
+<!-- About Container -->
 <html>
-<head>
-
+<head> 
+<title>Clinica Veterinaria Arca de Noé</title>
 <meta charset="UTF-8">
-<title>Clinica Veterinária Arca de Noé</title>
-<spring:url value="agendamento/" var="agendamento"></spring:url>
-<!-- Bootstrap core CSS -->
-<link href="/css/bootstrap.min.css" rel="styLesheet">
-<link href="/webjars/open-iconic/font/css/open-iconic-bootstrap.min.css" rel="stylesheet" >
-
-<!-- Custom styles for this template -->
-<link href="/css/style.css" rel="stylesheet" />
-
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
 </head>
-
+<style>
+body, html {height: 100%}
+body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif}
+.menu {display: none}
+.bgimg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url('clinica.jpg');
+  min-height: 90%; 
+}
+</style>
+</head>
 <body>
-	<header>
-		<nav
-			class="navbar navbar-inverse navbar navbar-dark bg-dark fixed-top">
-			<div class="container-fluid">
-				<div class="navbar-header">
-					<button type="button" class="btn btn-dark navbar-toggle pull-left">
-						<i class="oi oi-menu"></i>
-					</button>
-					<a class="navbar-brand " href="#">Painel Administrativo da
-						Clinica</a>
-				</div>
-			</div>
-		</nav>
-	</header>
-
-	<div class="layout-main">
-
-		<aside>
-			<nav class="sidebar sidebar-open">
-				<ul class="nav nav-pills">
-					<li class="nav-item"><a class="nav-link " href="/"> <i
-							class="oi oi-home"></i> <span></span>
-					</a></li>
-				</ul>
-
-				<ul class="nav nav-pills">
-					<li class="nav-item"><span class="nav-link active">Usuários</span></li>
-					<li class="nav-item"><a class="nav-link" href="/usuarios/novo">
-							<i class="oi oi-plus"></i> <span>Agendamentos </span>
-					</a></li>
-					<li class="nav-item"><a class="nav-link"
-						href="/usuarios/listar"> <i class="oi oi-spreadsheet"></i> <span>Listas
-						</span>
-					</a></li>
-				</ul>
-			</nav>
-		</aside>
-
-		<section class="layout-content">
+	<!-- Navbar (sit on top) -->
+<div class="w3-top w3-hide-small">
+  <div class="w3-bar w3-xlarge w3-black w3-opacity w3-hover-opacity-off" id="myNavbar">
+     <a href="/" class="w3-bar-item w3-button">Home </a>
+	<a href="/cadastrarCliente" class="w3-bar-item w3-button">Cliente</a>
+    <a href="/cadastrarFuncionario" class="w3-bar-item w3-button">Funcionario</a>
+    <a href="/cadastrarExame" class="w3-bar-item w3-button">Exames</a>
+	<a href="/cadastrarTratamento" class="w3-bar-item w3-button">Tratamento</a>
+	<a href="/cadastrarEspecialidades" class="w3-bar-item w3-button">Especialidade</a>
+	<a href="/cadastrarAnimal" class="w3-bar-item w3-button">Animal</a>
+	<a href="/contato" class="w3-bar-item w3-button">Contato</a>
+	
+  </div>
+</div> 
+	<section class="layout-content">
 
 			<nav class="navbar navbar-expand-md bg-light">
 				<div class="collapse navbar-collapse" id="navbarsExampleDefault">
@@ -67,6 +48,8 @@
 						</li>
 					</ul>
 				</div>
+</nav>
+	
 			</nav>
 
 			<div class="container">
