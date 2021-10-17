@@ -28,15 +28,15 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif}
 	  <!-- Navbar (sit on top) -->
 <div class="w3-top w3-hide-small">
   <div class="w3-bar w3-xlarge w3-black w3-opacity w3-hover-opacity-off" id="myNavbar">
-     <a href="/" class="w3-bar-item w3-button">Home </a>
+    <a href="/" class="w3-bar-item w3-button">Home</a>
 	<a href="/cadastrarCliente" class="w3-bar-item w3-button">Cliente</a>
     <a href="/cadastrarFuncionario" class="w3-bar-item w3-button">Funcionario</a>
     <a href="/cadastrarExame" class="w3-bar-item w3-button">Exames</a>
 	<a href="/cadastrarTratamento" class="w3-bar-item w3-button">Tratamento</a>
+	<a href="/cadastrarMedicamentos" class="w3-bar-item w3-button">Medicamentos</a>
 	<a href="/cadastrarEspecialidades" class="w3-bar-item w3-button">Especialidade</a>
 	<a href="/cadastrarAnimal" class="w3-bar-item w3-button">Animal</a>
 	<a href="/contato" class="w3-bar-item w3-button">Contato</a>
-	
   </div>
 </div> 
 
@@ -47,17 +47,28 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif}
     <p>Clinica Veterinaria Arca de Noé!</p>
     <p><span class="w3-tag">ATENÇÃO</span> Cadastro do Animal !</p>
     <p class="w3-xxlarge"><strong>Informações do Animal</strong> , Preencher Formulário abaixo:</p>
-    <form action="/action_page.php" target="_blank">
-	  <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Nome" required name="Cliente"></p>
-      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Id" required name="Id"></p>
-	  <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Idade" required name="Consultas"></p>
-	  <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Especies" required name="Tipo"></p>
-	  <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Raça" required name="Medico"></p>
-      <p><button class="w3-button w3-light-grey w3-block" type="submit"> <a href="Agendado.html">Cadastrar</button></p></a>
+    <form class="container" method="post">
+	  <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Nome" required name="nome"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Idade" required name="idade"></p>
+	  <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Espécie" required name="especies"></p>
+	  <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Raça" required name="raca"></p>
+      <p><button class="w3-button w3-light-grey w3-block" type="submit">Cadastrar</button></p>
     </form>
+    <h1>Lista de Pets</h1><table class="container"><thead><tr>
+<th>Nome</th>
+<th>Idade</th>
+<th>especies</th>
+<th>raca</th></tr></thead><tbody>
+<tr th:each="animais : ${animais}"><div class="row"></div>
+<td><span th:text="${animais.idade}"></span></td>
+<td><span th:text="${animais.idade}"></span></td>
+<td><span th:text="${animais.especies}"></span></td>
+<td><span th:text="${animais.raca}"></span></td></tr></tbody>
+</table>
   </div>
-</div>
-<script>
+  <script>
+	<!--JavaScript at end of body for optimized loading-->
+	
 // Tabbed Menu
 function openMenu(evt, menuName) {
   var i, x, tablinks;

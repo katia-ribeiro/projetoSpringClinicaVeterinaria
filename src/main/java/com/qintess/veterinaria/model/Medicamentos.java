@@ -10,11 +10,10 @@ import javax.persistence.ManyToOne;
 @Entity
 public class Medicamentos {
 	
-	private String nome;
-	
 @Id
 @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
+	private String nome;
 	private String descricao;
 	
 	@ManyToOne(fetch = FetchType.LAZY)//ok
